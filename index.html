@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hadestown</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(to right, #434343 0%, black 100%);
+    }
+    h2,
+    p,
+    div {
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #dad8c8;
+    }
+
+    h1 {
+      font-size: 80px;
+
+      text-align: center;
+      padding: 10px 0px;
+      margin: 0 auto;
+      line-height: 2;
+      color: #b40005;
+      font-family: monospace;
+    }
+    h2 {
+      padding: 0px, 10px, 90px, 10px;
+      margin: 30 auto;
+      line-height: 2;
+    }
+    p {
+      font-size: 20px;
+    }
+    strong {
+      font-weight: 600;
+    }
+    div {
+      color: #dad8c8;
+      font-size: 18px;
+    }
+    span {
+      font-weight: bolder;
+    }
+    a {
+      color: #b40005;
+      line-height: 50px;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 20px;
+      border: 25px;
+      background-color: #b40005;
+      color: #dad8c8;
+      border: 2px solid #b40005;
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: rgba 37, 39, 89, 0.08 8px 8px 8px 16px;
+      cursor: pointer;
+      transition: all 300ms ease;
+    }
+
+    button:hover {
+      background-color: #dad8c8;
+      color: #b40005;
+    }
+    hr {
+      margin: 60px;
+    }
+    .titleImage {
+      display: block;
+      margin: 0 auto;
+      max-width:100%
+      box-shadow: 10px 5px 5px rgba (0.3, 0, 0, 0.3);
+    }
+    .lovers {
+      display: block;
+      margin: 0 auto;
+      max-width: fit-content;
+      padding: 30px 0px 45px 0px;
+      box-shadow: 200px rgba (0.5);
+    }
+    .coderInfo {
+      font-size: 12px;
+      text-align: right;
+    }
+  </style>
+  <body>
+    <img src =
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/419/original/Hadestown.jpg?1700417981
+    alt= Hadestown-title-image class="titleImage"/>
+    <h1>HADESTOWN</h1>
+    <h2>A musical above all others. What are you waiting for?</h2>
+
+    <p>
+      New York has been graced by the production as it currently runs since
+      2019, but the history of this musical goes all the way back to Vermont in
+      2006 and its original conception.
+      <br />The brain child of the legendary <strong>Anaïs Mitchell</strong>,
+      this musical mixes Greek mythology with folk, pop and blues music to tell
+      the tragic story of Orpheus and Eurydice, as well as that of Hades and
+      Persephone.
+      <br />
+      Nominated for 14 Tony Awards in 2019,
+      <span>Hadestown won eight of them</span>, including the coveted awards for
+      <span>Best Musical and Best Original Score.</span>
+    </p>
+    <img src =
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/418/original/Hadestown_Lovers.jpg?1700417820
+    alt="Orpheus-and-Eurydice" class="lovers"/>
+    <div>
+      And now we keenly anticipate the <span>2024 UK opening</span> 😍 The West
+      End cast, including <span>Dónal Finn, Grace Hodgett-Young </span>and the
+      powerhouse that is<span> Melanie La Barrie</span>, will take to the stage
+      in February of next year.
+      <br />
+      So, will <em>you</em> be taking a trip to the underworld?
+      <hr />
+      <a href="https://hadestown.com/" target="_blank">
+        Learn more about Hadestown
+      </a>
+    </div>
+    <button>Buy tickets today</button>
+    <br />
+    <p class="coderInfo">Coded by Elizabeth Moon 🌹</p>
+    <script>
+      let name = prompt("Welcome songbird 🌹 What is your name?");
+      let h2 = document.querySelector("h2");
+      h2.innerHTML =
+        " A musical above all others. What are you waiting for, " + name + "?";
+
+      function americaOrEngland() {
+        let location = prompt("Do you want New York or London tickets?");
+        if (location === "New York" || location === "London") {
+          alert("🎭 Let's find you tickets to the Underworld! 🎭");
+        } else {
+          alert(
+            "Uh-oh, there is no production in that location... yet. Wait for us 😍"
+          );
+        }
+      }
+      let ticketButton = document.querySelector("button");
+      ticketButton.addEventListener("click", americaOrEngland);
+    </script>
+  </body>
+</html>
